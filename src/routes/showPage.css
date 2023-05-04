@@ -1,0 +1,27 @@
+.h1-shadow {
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.p-shadow {
+    text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+}
+
+
+.banner {
+    background: linear-gradient(-120deg, #2a43c3, #b5d931, #c7271c, #cf8506); /* 背景渐变 */
+    background-size: 500% 500%; /* 背景大小 */
+    animation: gradientBG 15s ease infinite; /* 应用动画 */
+  }
+  
+  /* 定义 keyframes 动画 */
+  @keyframes gradientBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }

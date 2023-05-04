@@ -84,7 +84,7 @@ function Root() {
                                 }}
                             >
                                 {pages.map((page) => (
-                                    <Link key={page.to} to={page.to} xs={{ textDecoration: 'none' }}>
+                                    <Link key={page.to} to={page.to} style={{ textDecoration: 'none' }}>
                                         <MenuItem key={page} onClick={handleCloseNavMenu}>
                                             <Typography textAlign="center" xs={{ color: 'inherit', textDecoration: 'none' }}>{page.name}</Typography>
                                         </MenuItem>
