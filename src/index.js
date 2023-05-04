@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-
+import './i18n';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     element: <Root></Root>,
     children: [
       {
-        path: "/",
+        path: "/index",
         element: <ShowPage></ShowPage>,
       },
       {

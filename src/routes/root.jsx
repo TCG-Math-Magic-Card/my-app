@@ -11,6 +11,9 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link, Outlet } from 'react-router-dom';
+import { Select } from '@mui/material';
+import { useTranslation } from 'react-i18next';
+import LanguageIcon from '@mui/icons-material/Language';
 
 const pages = [
     { name: '完整规则', to: 'rule' },
@@ -19,8 +22,12 @@ const pages = [
     { name: '关于', to: 'about' },
 ];
 
+
 function Root() {
+    const { t, i18n } = useTranslation();
     const [anchorElNav, setAnchorElNav] = React.useState(null);
+    console.log(i18n.language);
+    const [lang, setLang] = React.useState(i18n.language);
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -28,6 +35,11 @@ function Root() {
 
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
+    };
+
+    const handleChange = (event) => {
+        setLang(event.target.value);
+        i18n.changeLanguage(event.target.value);
     };
 
     return (
@@ -40,7 +52,6 @@ function Root() {
                             variant="h6"
                             noWrap
                             component="a"
-                            href="/"
                             sx={{
                                 mr: 2,
                                 display: { xs: 'none', md: 'flex' },
@@ -51,7 +62,9 @@ function Root() {
                                 textDecoration: 'none',
                             }}
                         >
-                            Math Magic Card
+                            <Link to="index" style={{ textDecoration: 'none', color: "inherit" }}>
+                                Math Magic Card
+                            </Link>
                         </Typography>
 
                         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -86,7 +99,7 @@ function Root() {
                                 {pages.map((page) => (
                                     <Link key={page.to} to={page.to} style={{ textDecoration: 'none' }}>
                                         <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                            <Typography textAlign="center" xs={{ color: 'inherit', textDecoration: 'none' }}>{page.name}</Typography>
+                                            <Typography textAlign="center" xs={{ color: 'inherit', textDecoration: 'none' }}>{t(page.name)}</Typography>
                                         </MenuItem>
                                     </Link>
                                 ))}
@@ -109,7 +122,7 @@ function Root() {
                                 textDecoration: 'none',
                             }}
                         >
-                            LOGO
+                            Math Magic Card
                         </Typography>
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                             {pages.map((page) => (
@@ -118,11 +131,21 @@ function Root() {
                                         onClick={handleCloseNavMenu}
                                         sx={{ my: 2, color: 'white', display: 'block', textDecoration: 'none' }}
                                     >
-                                        {page.name}
+                                        {t(page.name)}
                                     </Button>
                                 </Link>
                             ))}
                         </Box>
+                        <LanguageIcon />
+                        <Select
+                            labelId="lang-select"
+                            id="lang-select"
+                            value={lang}
+                            onChange={handleChange}
+                        >
+                            <MenuItem key="zh" value={"zh"}>中文</MenuItem>
+                            <MenuItem key="en" value={"en"}>English</MenuItem>
+                        </Select>
                     </Toolbar>
                 </Container>
             </AppBar>

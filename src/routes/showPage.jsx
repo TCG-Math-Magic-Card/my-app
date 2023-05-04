@@ -1,7 +1,10 @@
 import { Box, Grid, Paper, Typography } from "@mui/material";
 import './showPage.css'
+import { useTranslation } from 'react-i18next';
+
 // 展示页
 function ShowPage() {
+    const { t, i18n } = useTranslation();
     return (
         <>
             <Box
@@ -30,7 +33,7 @@ function ShowPage() {
                             lineHeight: 1.0,
                         }}
                     >
-                        欢迎来到
+                        {t('欢迎来到')}
                     </Typography>
                     <Typography
                         className="h1-shadow"
@@ -38,11 +41,11 @@ function ShowPage() {
                         display="flex"
                         justifyContent="center"
                         sx={{
-                            fontWeight: 900,
+                            fontWeight: 10,
                             color: "white",
                             lineHeight: 2.5,
                         }}>
-                        数学魔法卡
+                        {t('数学魔法卡')}
                     </Typography>
                     <Typography
                         className="h1-shadow"
@@ -54,7 +57,7 @@ function ShowPage() {
                             fontWeight: "blod",
                             lineHeight: 2.5,
                         }}>
-                        的世界!
+                        {t('的世界!')}
                     </Typography>
                 </Paper>
             </Box>
