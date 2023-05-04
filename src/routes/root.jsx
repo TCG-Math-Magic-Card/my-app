@@ -62,7 +62,7 @@ function Root() {
                                 textDecoration: 'none',
                             }}
                         >
-                            <Link to="index" style={{ textDecoration: 'none', color: "inherit" }}>
+                            <Link to="/" style={{ textDecoration: 'none', color: "inherit" }}>
                                 Math Magic Card
                             </Link>
                         </Typography>
