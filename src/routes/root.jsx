@@ -27,7 +27,7 @@ function Root() {
     const { t, i18n } = useTranslation();
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     console.log(i18n.language);
-    const [lang, setLang] = React.useState(i18n.language);
+    const [lang, setLang] = React.useState(i18n.language.substring(0, 2));
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -43,9 +43,9 @@ function Root() {
     };
 
     return (
-        <>
+        <Container maxWidth="100%">
             <AppBar position="static">
-                <Container maxWidth="xl">
+                <Container maxWidth="100%">
                     <Toolbar disableGutters>
                         {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
                         <Typography
@@ -150,10 +150,10 @@ function Root() {
                 </Container>
             </AppBar>
             {/* 这里是内容页面 */}
-            <Container id='detail'>
+            <Container id='detail' maxWidth="100%">
                 <Outlet />
             </Container>
-        </>
+        </Container>
     );
 }
 export default Root;

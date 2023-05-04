@@ -1,6 +1,7 @@
 import { Box, Grid, Paper, Typography } from "@mui/material";
 import './showPage.css'
 import { useTranslation } from 'react-i18next';
+import DescMMC from "../components/desc";
 
 // 展示页
 function ShowPage() {
@@ -10,6 +11,8 @@ function ShowPage() {
             <Box
                 xs="auto"
                 justifyContent="center"
+                maxWidth="1200px"
+                minWidth="900px"
                 sx={{
                     display: 'flex',
                     margin: 'auto',
@@ -17,7 +20,7 @@ function ShowPage() {
                     '& > :not(style)': {
                         m: 1,
                         height: 600,
-                        width: 800,
+                        width: "100%",
                     },
                 }}>
                 <Paper
@@ -61,6 +64,7 @@ function ShowPage() {
                     </Typography>
                 </Paper>
             </Box>
+            <DescMMC></DescMMC>
         </>
     );
 }

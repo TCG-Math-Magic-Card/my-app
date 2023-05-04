@@ -21,7 +21,7 @@ i18n
     // for all options read: https://www.i18next.com/overview/configuration-options
     .init({
         fallbackLng: localStorage.getItem('i18next') ? localStorage.getItem('i18next') : 'zh',
-        lng: 'zh',
+        // lng: localStorage.getItem('i18next') ? localStorage.getItem('i18next') : 'zh',
         debug: true,
         interpolation: {
             escapeValue: false, // not needed for react as it escapes by default
