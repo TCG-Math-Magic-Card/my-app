@@ -8,7 +8,7 @@ import './desc.css'
 function DescMMC() {
     const { t } = useTranslation();
     return (
-        <Grid spacing={2} width="100%" margin="0px" m={5}>
+        <Grid container spacing={2} width="100%" >
             <Grid
                 item
                 xs={12}

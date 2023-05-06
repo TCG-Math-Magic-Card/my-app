@@ -16,5 +16,7 @@
         "name": "Junior Number One",
         "desc": "Category: Natural/Odd\r\nWhen set this card in [Value Area], you can take a card with [Natural] Category from desk to your hand.",
         "lang": "en"
-    }
+    },
+    "简易规则": "Simple Rule",
+    "值卡": "Value Card"
 }

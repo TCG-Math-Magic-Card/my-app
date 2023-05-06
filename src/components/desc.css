@@ -1,8 +1,10 @@
 .question {
+    min-width: "200px";
     font-weight: "blod";
     line-height: 2.5;
 }
 
 .anser {
+    min-width: "200px";
     line-height: 1.5;
 }
