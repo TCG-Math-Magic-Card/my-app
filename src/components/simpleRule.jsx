@@ -81,6 +81,70 @@ function SimpleRule() {
                         </Grid>
                     </Paper>
                 </Grid>
+                <Grid
+                    item
+                    xs={12}>
+                    <Typography
+                        display="flex"
+                        justifyContent="center"
+                        variant="h2">{t("算子卡")}</Typography>
+                </Grid>
+                {/* 算子卡介绍页面 */}
+                <Grid
+                    item
+                    xs={12}
+                    justifyContent="center">
+                    <Paper
+                        elevation={12}
+                        height="fixed"
+                        width="100%"
+                        sx={{
+                            background: "#f9cb9c",
+                            minWidth: "100%",
+                            maxWidth: "100%",
+                        }}
+                    >
+                        <Grid
+                            direction="row"
+                            container
+                            spacing={0}>
+                            <Grid
+                                m={2}
+                                xs={4}
+                                item
+                            >
+                                <Box>
+                                    <CardBox
+                                        size={500}
+                                        _id="000002"
+                                        name={t('sample2.name')}
+                                        lang={t('sample2.lang')}
+                                        type='operator'
+                                        desc={t('sample2.desc')}
+                                        vp={0}
+                                        dp={0}
+                                        formulaPic="https://raw.githubusercontent.com/TCG-Math-Magic-Card/db/main/svg/000002.svg"
+                                        pic="https://raw.githubusercontent.com/TCG-Math-Magic-Card/db/main/pic/000002.png"
+                                    />
+                                </Box>
+                            </Grid>
+                            <Grid
+                                m={5}
+                                item
+                                xs={6}
+                            >
+                                <Typography color={"white"} variant="h3">
+                                    {t("算子这个概念可能在你的生活中并不常见，但是你一定知道+这个符号。它一般也被叫做加法符号，我们这里说的算子卡就是类型与+、-之类你常见的技术符号。你可能也感觉到了，算子卡表示的符号可以把两个‘值’（游戏里对应值卡）链接在一起，从而形成一个新的式子。比如：1+1,4-3之类的。")}
+                                </Typography>
+                                <br />
+                                <br />
+                                <br />
+                                <Typography className="item-desc" variant="h4">- {t("算子由蓝色代表")}</Typography>
+                                {/* 这里是描述文案 */}
+                            </Grid>
+                        </Grid>
+                    </Paper>
+                </Grid>
             </Grid>
         </>
     );

@@ -17,6 +17,11 @@
         "desc": "Category: Natural/Odd\r\nWhen set this card in [Value Area], you can take a card with [Natural] Category from desk to your hand.",
         "lang": "en"
     },
+    "sample2": {
+        "name": "Addition",
+        "desc": "Category: Symmetry/Operator.\r\n",
+        "lang": "en"
+    },
     "简易规则": "Simple Rule",
     "值卡": "Value Card",
     "值卡表示最纯粹的值。比如数字1或者数字2。它们的意义和你平时理解的数学上的1和2是差不多的。只是以卡片的形式体现。": "Value cards represent the purest form of value, such as the number 1 or the number 2. Their meaning is similar to what you would understand as mathematical 1 and 2 in everyday life, just expressed in the form of cards.",
@@ -24,5 +29,8 @@
     "【最初的数字 1】是卡片的名字": "[Junior Number One] is the name of the card",
     "黑板（也就是公式区）中的白字是它的值。": "The white text in the blackboard (also known as formula area) is its value.",
     "下方的描述是效果，在简易规则里你可以忽略这些。": "The description below is the effect. You can ignore these in the simple rule. ",
-    "圆圈中的黄色代表了这张卡是值卡。请习惯利用颜色分辨卡的功能。": "The yellow color in the circle represents that this card is a value card. Please get used to distinguishing the function of cards by their colors."
+    "圆圈中的黄色代表了这张卡是值卡。请习惯利用颜色分辨卡的功能。": "The yellow color in the circle represents that this card is a value card. Please get used to distinguishing the function of cards by their colors.",
+    "算子卡": "Operator Card",
+    "算子这个概念可能在你的生活中并不常见，但是你一定知道+这个符号。它一般也被叫做加法符号，我们这里说的算子卡就是类型与+、-之类你常见的技术符号。你可能也感觉到了，算子卡表示的符号可以把两个‘值’（游戏里对应值卡）链接在一起，从而形成一个新的式子。比如：1+1,4-3之类的。": "you certainly know the symbol +. It is generally called the addition symbol. The operator cards we are referring to here are similar to technical symbols that you commonly encounter, such as + and -. As you may have noticed, operator cards represent symbols that can link two 'values' (corresponding to value cards in the game) together to form a new expression, such as 1+1, 4-3, and so on.",
+    "算子由蓝色代表": "The operator is represented by blue."
 }
