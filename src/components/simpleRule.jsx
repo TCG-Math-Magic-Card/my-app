@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import CardBox from "./card/cardBox";
 import { Box, Container, Grid, Paper, Typography } from "@mui/material";
+import './simpleRule.css'
 
 // 简单规则的页面
 function SimpleRule() {
@@ -41,30 +42,42 @@ function SimpleRule() {
                             maxWidth: "100%",
                         }}
                     >
-                        <Grid container spacing={2} width="100%">
+                        <Grid
+                            direction="row"
+                            container
+                            spacing={0}>
+                            <Grid
+                                m={5}
+                                item
+                                xs={7}
+                            >
+                                <Typography color={"white"} variant="h3">{t("值卡表示最纯粹的值。比如数字1或者数字2。它们的意义和你平时理解的数学上的1和2是差不多的。只是以卡片的形式体现。")}</Typography>
+                                <br />
+                                <br />
+                                <br />
+                                <Typography className="item-desc" variant="h4">- {t("右侧的图片就是一张值卡")}</Typography>
+                                <Typography className="item-desc" variant="h4">- {t("【最初的数字 1】是卡片的名字")}</Typography>
+                                <Typography className="item-desc" variant="h4">- {t("黑板（也就是公式区）中的白字是它的值。")}</Typography>
+                                <Typography className="item-desc" variant="h4">- {t("下方的描述是效果，在简易规则里你可以忽略这些。")}</Typography>
+                                <Typography className="item-desc" variant="h4">- {t("圆圈中的黄色代表了这张卡是值卡。请习惯利用颜色分辨卡的功能。")}</Typography>
+                                {/* 这里是描述文案 */}
+                            </Grid>
                             <Grid
                                 m={2}
+                                xs={3}
                                 item
                             >
-                                <CardBox
-                                    size={500}
-                                    _id="000001"
-                                    name={t('sample.name')}
-                                    lang={t('sample.lang')}
-                                    // type='value-assertion'
-                                    type='value'
-                                    desc={t('sample.desc')}
-                                    sx={{
-                                        marginTop: "10px"
-                                    }}
-                                />
+                                <Box>
+                                    <CardBox
+                                        size={500}
+                                        _id="000001"
+                                        name={t('sample.name')}
+                                        lang={t('sample.lang')}
+                                        type='value'
+                                        desc={t('sample.desc')}
+                                    />
+                                </Box>
                             </Grid>
-                        </Grid>
-                        <Grid
-                            m={8}
-                            item
-                        >
-                            {/* 这里是描述文案 */}
                         </Grid>
                     </Paper>
                 </Grid>
