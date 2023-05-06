@@ -2,6 +2,7 @@ import { Box, Grid, Paper, Typography } from "@mui/material";
 import './showPage.css'
 import { useTranslation } from 'react-i18next';
 import DescMMC from "../components/desc";
+import SimpleRule from "../components/simpleRule";
 
 // 展示页
 function ShowPage() {
@@ -64,7 +65,10 @@ function ShowPage() {
                     </Typography>
                 </Paper>
             </Box>
+            {/* Q and A */}
             <DescMMC></DescMMC>
+            {/* 简易规则介绍 */}
+            <SimpleRule></SimpleRule>
         </>
     );
 }

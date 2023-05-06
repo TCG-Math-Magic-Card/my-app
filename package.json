@@ -18,7 +18,8 @@
     "react-i18next": "^12.2.2",
     "react-router-dom": "^6.11.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "mmcjs": "git@github.com:TCG-Math-Magic-Card/mmcjs.git"
   },
   "scripts": {
     "start": "react-scripts start",
