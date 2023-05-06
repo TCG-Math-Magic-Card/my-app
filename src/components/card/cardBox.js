@@ -8,7 +8,7 @@ function CardBox({
     lang = 'cn',
     type = 'value',
     desc = '',
-    vp = 0,
+    vp = 1,
     dp = 1,
     pic = 'https://raw.githubusercontent.com/TCG-Math-Magic-Card/mmcjs/math/pic/000001.jpg',
     formulaPic = 'https://raw.githubusercontent.com/TCG-Math-Magic-Card/mmcjs/main/pic/1.svg',
@@ -25,7 +25,6 @@ function CardBox({
         pic,
         formulaPic,
     };
-    // const [cardData, setCardData] = useState();
     const [card, setCard] = useState(null);
     const canvas = useRef(null);
 
@@ -50,6 +49,18 @@ function CardBox({
     }, [canvas]);
 
     // useEffect(() => setCardData(data), [data])
+
+    useEffect(() => {
+        renderCard(data);
+    }, [canvas]);
+
+    // 检查数据的变化
+    useEffect(() => {
+        if (card) {
+            card.feedData(data);
+            card.render();
+        }
+    }, [name, desc]);
 
     return (
         <canvas ref={canvas} />

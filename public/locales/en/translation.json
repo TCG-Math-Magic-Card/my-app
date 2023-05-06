@@ -11,5 +11,10 @@
     "Q: 数学魔法卡是一个什么样的游戏？": "Q: What kind of game is Math Magic Card?",
     "A: 数学魔法卡，是一个致力于将纯粹的数学概念融入到桌游中的游戏。当然里面会有魔法的部分，但是我保证核心获胜的机制是数学概念。": "A: Math Magic Card is a game dedicated to integrating pure mathematical concepts into tabletop games. Of course, there will be magical elements, but I guarantee that the core winning mechanism is based on mathematical concepts.",
     "Q: 为什么要设计这样的游戏？": "Q: Why design such a game?",
-    "A: 单纯出于好玩。": "A: Just For Fun!"
+    "A: 单纯出于好玩。": "A: Just For Fun!",
+    "sample": {
+        "name": "Junior Number One",
+        "desc": "Category: Natural/Odd\r\nWhen set this card in [Value Area], you can take a card with [Natural] Category from desk to your hand.",
+        "lang": "en"
+    }
 }
