@@ -17,6 +17,7 @@ function SimpleRule() {
                         justifyContent="center"
                         variant="h1">{t("简易规则")}</Typography>
                 </Grid>
+                {/* 值卡 */}
                 <Grid
                     item
                     xs={12}>
@@ -141,6 +142,70 @@ function SimpleRule() {
                                 <br />
                                 <Typography className="item-desc" variant="h4">- {t("算子由蓝色代表")}</Typography>
                                 {/* 这里是描述文案 */}
+                            </Grid>
+                        </Grid>
+                    </Paper>
+                </Grid>
+                {/* 断言卡 */}
+                <Grid
+                    item
+                    xs={12}>
+                    <Typography
+                        display="flex"
+                        justifyContent="center"
+                        variant="h2">{t("断言卡")}</Typography>
+                </Grid>
+                <Grid
+                    item
+                    xs={12}
+                    justifyContent="center">
+                    <Paper
+                        elevation={12}
+                        height="fixed"
+                        width="100%"
+                        sx={{
+                            background: "#b4a7d6",
+                            // paddingLeft: 0,
+                            // paddingRight: 0,
+                            // border: 0,
+                            minWidth: "100%",
+                            maxWidth: "100%",
+                        }}
+                    >
+                        <Grid
+                            direction="row"
+                            container
+                            spacing={0}>
+                            <Grid
+                                m={5}
+                                item
+                                xs={7}
+                            >
+                                <Typography color={"white"} variant="h3">{t("断言卡上有一句断言，用来描述一个数学概念。比如“这是偶数”、“这是奇数”。通过值卡和算子卡构成的式子我们可以得出一个值。然后我们通过我们的数学知识就可以知道这个断言的真假了。比如 1+1 | 是奇数，1+1 | 是偶数。我们可以知道第一个组合是假，第二个组合是真。")}</Typography>
+                                <br />
+                                <br />
+                                <br />
+                                <Typography className="item-desc" variant="h4">- {t("断言由红色代表")}</Typography>
+                                <Typography className="item-desc" variant="h4">- {t("VP表示胜利点数，DP表示失败点数")}</Typography>
+                                {/* 这里是描述文案 */}
+                            </Grid>
+                            <Grid
+                                m={2}
+                                xs={3}
+                                item
+                            >
+                                <Box>
+                                    <CardBox
+                                        size={500}
+                                        _id="000001"
+                                        name={t('sample3.name')}
+                                        lang={t('sample3.lang')}
+                                        type='assertion'
+                                        desc={t('sample3.desc')}
+                                        formulaPic="https://raw.githubusercontent.com/TCG-Math-Magic-Card/db/main/svg/000003.svg"
+                                        pic="https://raw.githubusercontent.com/TCG-Math-Magic-Card/db/main/pic/000003.png"
+                                    />
+                                </Box>
                             </Grid>
                         </Grid>
                     </Paper>
