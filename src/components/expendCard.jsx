@@ -4,7 +4,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useState } from "react";
 
 // 简单封装的展开卡组
-function ExpandCard({ title, open, children }) {
+function ExpandCard({ title, open, children, className }) {
     const [expanded, setExpanded] = useState(open);
 
     function handleExpandClick() {
@@ -13,7 +13,7 @@ function ExpandCard({ title, open, children }) {
 
     return (
         <>
-            <Card>
+            <Card className={className}>
                 <CardHeader
                     title={title}
                     action={

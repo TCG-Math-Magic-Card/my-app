@@ -2,6 +2,7 @@ import { Grid, Paper, Step, StepButton, Stepper, Typography } from "@mui/materia
 import { useState } from "react";
 import ExpandCard from "./expendCard";
 import { useTranslation } from "react-i18next";
+import './simpleStep.css'
 
 // 简单流程介绍
 function SimpleStep() {
@@ -97,6 +98,15 @@ function SimpleStep() {
                                 <Grid
                                     m={2}
                                     item
+                                    xs={2}
+                                >
+                                    <ExpandCard className="golden" title={t("黄金规则")} open={true}>
+                                        {t("找一个愿意和你玩这个游戏的朋友!")}
+                                    </ExpandCard>
+                                </Grid>
+                                <Grid
+                                    m={2}
+                                    item
                                     xs={12}
                                 >
                                     <ExpandCard title={t("游戏场地")} open={true}>
@@ -118,7 +128,36 @@ function SimpleStep() {
                                 </Grid>
                             </>)
                         }
-
+                        {/* 流程1相关的内容 */}
+                        {activeStep === 1 && (
+                            <>
+                                <Grid
+                                    m={5}
+                                    item
+                                    xs={10}
+                                >
+                                    <Typography variant="h6" >{t("在摸牌过后可以选择下来的两项中的一项进行，或者什么也不做之间进行下一个阶段。")}</Typography>
+                                </Grid>
+                                <Grid
+                                    m={2}
+                                    item
+                                    xs={12}
+                                >
+                                    <ExpandCard title={t("设置值")} open={true}>
+                                        xxxx
+                                    </ExpandCard>
+                                </Grid>
+                                <Grid
+                                    m={2}
+                                    item
+                                    xs={12}
+                                >
+                                    <ExpandCard title={t("设置算子")} open={true}>
+                                        xxxx
+                                    </ExpandCard>
+                                </Grid>
+                            </>
+                        )}
                     </Grid>
                 </Paper >
             </Grid >

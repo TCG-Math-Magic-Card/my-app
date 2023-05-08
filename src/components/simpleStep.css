@@ -1,0 +1,18 @@
+.golden {
+    background: linear-gradient(-120deg, #8E8E38,#ededd2 ,#cccc63, #8E8E38); /* 背景渐变 */
+    background-size: 500% 500%; /* 背景大小 */
+    animation: gradientBG 15s ease infinite; /* 应用动画 */
+  }
+  
+  /* 定义 keyframes 动画 */
+  @keyframes gradientBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
