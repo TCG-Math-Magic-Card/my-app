@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import CardBox from "./card/cardBox";
 import { Box, Container, Grid, Paper, Typography } from "@mui/material";
 import './simpleRule.css'
+import SimpleStep from "./simpleStep";
 
 // 简单规则的页面
 function SimpleRule() {
@@ -209,6 +210,20 @@ function SimpleRule() {
                             </Grid>
                         </Grid>
                     </Paper>
+                </Grid>
+                {/* 游戏流程 */}
+                <Grid
+                    item
+                    xs={12}>
+                    <Typography
+                        display="flex"
+                        justifyContent="center"
+                        variant="h2">{t("游戏流程")}</Typography>
+                </Grid>
+                <Grid
+                    item
+                    xs={12}>
+                    <SimpleStep />
                 </Grid>
             </Grid>
         </>
