@@ -90,7 +90,7 @@ function SimpleStep() {
                                     item
                                     xs={2}
                                 >
-                                    <ExpandCard title={"手卡上限"} open={true}>
+                                    <ExpandCard title={t("手卡上限")} open={true}>
                                         {t("不大于7张。在每个回合结束前要弃置至7张。")}
                                     </ExpandCard>
                                 </Grid>
