@@ -67,5 +67,7 @@
     "设置值": "Set Value",
     "选择一个还没有使用的【值区】，从手牌正面朝上放置一个值卡。": "Choose an unused [Value Area] and place a value card from your hand face up on it.",
     "设置算子": "Set Operator",
-    "选择一个还没有使用的【算子区】，从手牌正面朝上放置一个算子卡。": "Choose an unused [Operator Area] and place an operator card from your hand face up on it."
+    "选择一个还没有使用的【算子区】，从手牌正面朝上放置一个算子卡。": "Choose an unused [Operator Area] and place an operator card from your hand face up on it.",
+    "case_art_pic": "pic/case_art_en.jpg",
+    "你可以从手卡选择一个断言卡放置在断言区内。": "You can choose a Assertion card from your hand and place it in the [Assertion Area]."
 }

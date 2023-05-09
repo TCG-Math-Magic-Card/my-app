@@ -183,6 +183,25 @@ function SimpleStep() {
                                 </Grid>
                             </>
                         )}
+
+                        {/* 流程2相关的内容 */}
+                        {activeStep === 2 && (
+                            <>
+                                <Grid
+                                    container
+                                    spacing={2}
+                                    justifyContent="center">
+                                    <Grid m={5} item xs={12}>
+                                        <Typography variant="h6" >
+                                            {t("你可以从手卡选择一个断言卡放置在断言区内。")}
+                                        </Typography>
+                                    </Grid>
+                                    <Grid item xs={8}>
+                                        <img src={t("case_art_pic")} />
+                                    </Grid>
+                                </Grid>
+                            </>
+                        )}
                     </Grid>
                 </Paper >
             </Grid >
