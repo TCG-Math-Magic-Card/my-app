@@ -60,5 +60,12 @@
     "现在想象在你和对手之间有一些格子。总共有五个，正好可以放置5张卡片。奇数的位置处专门摆放值卡，偶数的位置处专门摆放算子卡。我们给这五个格子取个名字：“泳道”。奇数位叫做“值区”，偶数位叫做“算子区”。然后随便找个离自己近的位置。取名叫做“断言区”，你可能已经感觉出来了，这里是专门摆放断言卡的。不同的是：值区和算子区只能放着一张卡，断言区可以放许多张。你和对手各有一个断言区。": "Now imagine there are some spaces between you and your opponent. There are a total of five, which is just enough to place five cards. Odd-numbered places are for value cards, and even-numbered ones are for operator cards. Let's name these five spaces \"lanes\". The odd-numbered lane is called the \"value area\", and the even-numbered lane is called the \"operator area\". Then find a nearby location and name it the \"assertion area.\" You may have already guessed that this is where assertion cards are specifically placed. The difference is that only one card can be placed on the value and operator areas, while many cards can be placed on the assertion area. You and your opponent each have an assertion area.",
     "casePic": "pic/case_en.jpg",
     "黄金规则": "Gold Rule!",
-    "找一个愿意和你玩这个游戏的朋友!": "Asking a Friend play with you!"
+    "找一个愿意和你玩这个游戏的朋友!": "Asking a Friend play with you!",
+    "case_value_pic": "pic/case_value_en.jpg",
+    "case_op_pic": "pic/case_op_en.jpg",
+    "在摸牌过后可以选择下来的两项中的一项进行，或者什么也不做之间进行下一个阶段。": "After drawing two cards, you can choose to proceed with one of the two options, or do nothing and move on to the next phase.",
+    "设置值": "Set Value",
+    "选择一个还没有使用的【值区】，从手牌正面朝上放置一个值卡。": "Choose an unused [Value Area] and place a value card from your hand face up on it.",
+    "设置算子": "Set Operator",
+    "选择一个还没有使用的【算子区】，从手牌正面朝上放置一个算子卡。": "Choose an unused [Operator Area] and place an operator card from your hand face up on it."
 }

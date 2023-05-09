@@ -143,8 +143,21 @@ function SimpleStep() {
                                     item
                                     xs={12}
                                 >
-                                    <ExpandCard title={t("设置值")} open={true}>
-                                        xxxx
+                                    <ExpandCard title={t("设置值")} >
+                                        <Grid
+                                            container
+                                            spacing={2}
+                                            justifyContent="center">
+                                            <Grid item xs={12}>
+                                                <Typography variant="h6" >
+                                                    {t("选择一个还没有使用的【值区】，从手牌正面朝上放置一个值卡。")}
+                                                </Typography>
+                                            </Grid>
+                                            <Grid item xs={8}>
+                                                <img src={t("case_value_pic")} />
+                                            </Grid>
+
+                                        </Grid>
                                     </ExpandCard>
                                 </Grid>
                                 <Grid
@@ -152,8 +165,20 @@ function SimpleStep() {
                                     item
                                     xs={12}
                                 >
-                                    <ExpandCard title={t("设置算子")} open={true}>
-                                        xxxx
+                                    <ExpandCard title={t("设置算子")} >
+                                        <Grid
+                                            container
+                                            spacing={2}
+                                            justifyContent="center">
+                                            <Grid item xs={12}>
+                                                <Typography variant="h6" >
+                                                    {t("选择一个还没有使用的【算子区】，从手牌正面朝上放置一个算子卡。")}
+                                                </Typography>
+                                            </Grid>
+                                            <Grid item xs={8}>
+                                                <img src={t("case_op_pic")} />
+                                            </Grid>
+                                        </Grid>
                                     </ExpandCard>
                                 </Grid>
                             </>
