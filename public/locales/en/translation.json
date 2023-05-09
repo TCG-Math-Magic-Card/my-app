@@ -69,5 +69,14 @@
     "设置算子": "Set Operator",
     "选择一个还没有使用的【算子区】，从手牌正面朝上放置一个算子卡。": "Choose an unused [Operator Area] and place an operator card from your hand face up on it.",
     "case_art_pic": "pic/case_art_en.jpg",
-    "你可以从手卡选择一个断言卡放置在断言区内。": "You can choose a Assertion card from your hand and place it in the [Assertion Area]."
+    "你可以从手卡选择一个断言卡放置在断言区内。": "You can choose a Assertion card from your hand and place it in the [Assertion Area].",
+    "那么如何判断游戏结束和哪方获胜呢？每次回合结束的时候你们要看泳道内的5个区域是否都被摆满了卡。如果泳道内的卡满了。那么就就终止游戏，开始判断输赢了。": "So how do you determine when the game ends and who wins? At the end of each turn, you need to check whether all five areas in the lanes are filled with cards. If the lanes are full, the game ends, and it's time to determine the winner.",
+    "正如上面所述的一样。你要计算出泳道内值和算子构成的值。然后每个玩家再用这个值和自己断言区内的每个断言卡进行组合，断言为真胜利点数加上VP,断言为假胜利点数减去DP。然后比较两个那个胜利点数大，大的一方获得胜利。": "As mentioned above, you need to calculate the value formed by the values and operators in the lanes. Then each player uses this value and combines it with each assertion card in their own assertion area. If an assertion is true, victory points are added (VP), and if an assertion is false, victory points are subtracted (DP). Then compare which player has more victory points, and the player with more points wins.",
+    "听起来很简单是不是？在游戏中你要预测泳道可能出现的值，并且规划好设置断言的策略，如果设置的太多可能反而让自己失败。": "It sounds simple, doesn't it? In the game, you need to predict possible values in the lanes and plan your assertion strategy carefully. Setting too many assertions may actually lead to failure.",
+    "测试一下!": "Test now!",
+    "谁赢了？": "Who Wins?",
+    "上方": "Total",
+    "下方": "Bottom",
+    "恭喜你答对了！": "Brillent!",
+    "很遗憾.下方获胜了。泳道的值为1+1+1=3。是奇数。下方偶数断言卡一张。总胜利点数-1而上面有两张胜利点数-2。(-1>-2)": "Sorry, the bottom player wins this round. The value of the lanes is 1+1+1=3, which is an odd number. The bottom player has one even proposition card. Therefore, the total victory points -1, but the top player has two 'even' cards that are worth -2 each, which means (-1 > -2)."
 }
