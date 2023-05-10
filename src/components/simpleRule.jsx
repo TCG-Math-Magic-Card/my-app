@@ -200,7 +200,7 @@ function SimpleRule() {
                                 <Box>
                                     <CardBox
                                         size={500}
-                                        _id="000001"
+                                        _id="000003"
                                         name={t('sample3.name')}
                                         lang={t('sample3.lang')}
                                         type='assertion'

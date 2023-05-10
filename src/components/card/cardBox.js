@@ -27,6 +27,7 @@ function CardBox({
         formulaPic,
     };
     const [card, setCard] = useState(null);
+    const [hasDraw, setHasDraw] = useState(false);
     const canvas = useRef(null);
     const size2 = Array.isArray(size) ? size : [size, size / 813 * 1185];
     const observer = useRef();
@@ -44,6 +45,7 @@ function CardBox({
         });
         newCard.render();
         setCard(newCard);
+        setHasDraw(true);
     };
 
     useEffect(() => {
@@ -64,7 +66,7 @@ function CardBox({
     useEffect(() => {
         if (card) {
             card.feedData(data);
-            if (!lazy) {
+            if (!lazy || hasDraw) {
                 card.render();
             }
         }
