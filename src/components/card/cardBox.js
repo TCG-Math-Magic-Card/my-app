@@ -13,6 +13,7 @@ function CardBox({
     pic = 'https://raw.githubusercontent.com/TCG-Math-Magic-Card/mmcjs/math/pic/000001.jpg',
     formulaPic = 'https://raw.githubusercontent.com/TCG-Math-Magic-Card/mmcjs/main/pic/1.svg',
     size = [813, 1185],
+    lazy = false,
 }) {
     let data = {
         _id,
@@ -27,7 +28,8 @@ function CardBox({
     };
     const [card, setCard] = useState(null);
     const canvas = useRef(null);
-
+    const size2 = Array.isArray(size) ? size : [size, size / 813 * 1185];
+    const observer = useRef();
     // 渲染卡片
     const renderCard = (localData) => {
         if (!localData) {
@@ -45,25 +47,45 @@ function CardBox({
     };
 
     useEffect(() => {
-        renderCard(data);
+        if (!lazy) {
+            renderCard(data);
+        }
     }, [canvas]);
 
     // useEffect(() => setCardData(data), [data])
 
     useEffect(() => {
-        renderCard(data);
+        if (!lazy) {
+            renderCard(data);
+        }
     }, [canvas]);
 
     // 检查数据的变化
     useEffect(() => {
         if (card) {
             card.feedData(data);
-            card.render();
+            if (!lazy) {
+                card.render();
+            }
         }
     }, [name, desc]);
 
+    function handleIntersection(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                renderCard(data);
+            }
+        });
+    }
+    useEffect(() => {
+        const Observer = new IntersectionObserver(handleIntersection);
+        canvas.current && Observer.observe(canvas.current);
+        observer.current = Observer;
+        return () => observer.current.disconnect();
+    }, []);
+
     return (
-        <canvas ref={canvas} />
+        <canvas width={size2[0]} height={size2[1]} ref={canvas} />
     );
 }
 

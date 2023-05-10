@@ -77,6 +77,7 @@ function SimpleRule() {
                                         lang={t('sample.lang')}
                                         type='value'
                                         desc={t('sample.desc')}
+                                        lazy={true}
                                     />
                                 </Box>
                             </Grid>
@@ -127,6 +128,7 @@ function SimpleRule() {
                                         dp={0}
                                         formulaPic="https://raw.githubusercontent.com/TCG-Math-Magic-Card/db/main/svg/000002.svg"
                                         pic="https://raw.githubusercontent.com/TCG-Math-Magic-Card/db/main/pic/000002.png"
+                                        lazy={true}
                                     />
                                 </Box>
                             </Grid>
@@ -205,6 +207,7 @@ function SimpleRule() {
                                         desc={t('sample3.desc')}
                                         formulaPic="https://raw.githubusercontent.com/TCG-Math-Magic-Card/db/main/svg/000003.svg"
                                         pic="https://raw.githubusercontent.com/TCG-Math-Magic-Card/db/main/pic/000003.png"
+                                        lazy={true}
                                     />
                                 </Box>
                             </Grid>
