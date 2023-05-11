@@ -15,6 +15,7 @@ function ExpandCard({ title, open, children, className }) {
         <>
             <Card className={className}>
                 <CardHeader
+                    onClick={handleExpandClick}
                     title={title}
                     action={
                         <ExpandMore
