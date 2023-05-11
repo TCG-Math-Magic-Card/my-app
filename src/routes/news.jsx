@@ -7,7 +7,7 @@ function News() {
         {
             title: 'New!数学魔法卡网站建立',
             desc: '数学魔法卡网站正式成立上线，欢迎使用和提意见。',
-            img: '',
+            img: 'pic/Card_temp_cn.jpg',
             date: '2023-05-11',
         },
     ]
@@ -33,8 +33,7 @@ function News() {
                                             <CardMedia
                                                 component="img"
                                                 height="400"
-                                                image="pic/Card_temp_cn.jpg"
-                                                alt="green iguana"
+                                                image={item.img}
                                             />
                                             <CardContent>
                                                 <Typography gutterBottom variant="h5" component="div">
