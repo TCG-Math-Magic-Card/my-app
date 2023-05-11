@@ -11,7 +11,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link, Outlet } from 'react-router-dom';
-import { Select } from '@mui/material';
+import { Grid, Select } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import LanguageIcon from '@mui/icons-material/Language';
 
@@ -151,7 +151,9 @@ function Root() {
             </AppBar>
             {/* 这里是内容页面 */}
             <Container id='detail' maxWidth="100%">
-                <Outlet />
+                <Grid container justifyContent={"center"}>
+                    <Outlet />
+                </Grid>
             </Container>
         </Container>
     );

@@ -10,6 +10,8 @@ import Root from './routes/root';
 import ShowPage from './routes/showPage';
 import RulePage from './routes/rule';
 import CardDb from './routes/cardDb';
+import News from './routes/news';
+import About from './routes/about';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +29,14 @@ const router = createBrowserRouter([
       {
         path: "store",
         element: <CardDb></CardDb>
+      },
+      {
+        path: "news",
+        element: <News></News>
+      },
+      {
+        path: "about",
+        element: <About></About>
       }
     ]
   },

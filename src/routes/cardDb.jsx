@@ -29,13 +29,14 @@ function CardDb() {
     function handleClose() {
         setOpen(false)
     }
-
-    fetch(`https://raw.githubusercontent.com/TCG-Math-Magic-Card/db/main/${t('db')}`)
-        .then(response => response.json())
-        .then(data => {
-            setCardList(data);
-        })
-        .catch(error => console.error(error));
+    if (cardList.length == 0) {
+        fetch(`https://raw.githubusercontent.com/TCG-Math-Magic-Card/db/main/${t('db')}`)
+            .then(response => response.json())
+            .then(data => {
+                setCardList(data);
+            })
+            .catch(error => console.error(error));
+    }
 
     // const cardList = [
     //     {

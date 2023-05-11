@@ -76,6 +76,8 @@ function SimpleRule() {
                                         name={t('sample.name')}
                                         lang={t('sample.lang')}
                                         type='value'
+                                        vp={1}
+                                        dp={1}
                                         desc={t('sample.desc')}
                                         lazy={true}
                                     />
@@ -204,6 +206,8 @@ function SimpleRule() {
                                         name={t('sample3.name')}
                                         lang={t('sample3.lang')}
                                         type='assertion'
+                                        vp={1}
+                                        dp={1}
                                         desc={t('sample3.desc')}
                                         formulaPic="https://raw.githubusercontent.com/TCG-Math-Magic-Card/db/main/svg/000003.svg"
                                         pic="https://raw.githubusercontent.com/TCG-Math-Magic-Card/db/main/pic/000003.png"
