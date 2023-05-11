@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import './i18n';
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from "react-router-dom";
 import Root from './routes/root';
@@ -13,35 +13,39 @@ import CardDb from './routes/cardDb';
 import News from './routes/news';
 import About from './routes/about';
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Root></Root>,
-    children: [
+
+
+const router =
+  createHashRouter(
+    [
       {
         path: "/",
-        element: <ShowPage></ShowPage>,
+        element: <Root></Root>,
+        children: [
+          {
+            path: "/",
+            element: <ShowPage></ShowPage>,
+          },
+          {
+            path: "rule",
+            element: <RulePage></RulePage>
+          },
+          {
+            path: "store",
+            element: <CardDb></CardDb>
+          },
+          {
+            path: "news",
+            element: <News></News>
+          },
+          {
+            path: "about",
+            element: <About></About>
+          }
+        ]
       },
-      {
-        path: "rule",
-        element: <RulePage></RulePage>
-      },
-      {
-        path: "store",
-        element: <CardDb></CardDb>
-      },
-      {
-        path: "news",
-        element: <News></News>
-      },
-      {
-        path: "about",
-        element: <About></About>
-      }
     ]
-  },
-]);
-
+  );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
