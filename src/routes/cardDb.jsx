@@ -1,4 +1,4 @@
-import { Grid, ImageList, Paper } from "@mui/material";
+import { Dialog, Grid, ImageList, Paper } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import CardBox from "../components/card/cardBox";
 import { useState } from "react";
@@ -8,6 +8,27 @@ function CardDb() {
     const { t, i18n } = useTranslation()
 
     const [cardList, setCardList] = useState([]);
+    const [open, setOpen] = useState(false);
+    const [showData, setShowData] = useState();
+
+    function findById(id) {
+        for (const tmp of cardList) {
+            if (tmp._id === id) {
+                return packageData(tmp);
+            }
+        }
+        return null;
+    }
+
+    function handleOpen(event) {
+        setOpen(true);
+        const data = findById(event.currentTarget.id);
+        setShowData({ ...data, size: 600 });
+    }
+
+    function handleClose() {
+        setOpen(false)
+    }
 
     fetch(`https://raw.githubusercontent.com/TCG-Math-Magic-Card/db/main/${t('db')}`)
         .then(response => response.json())
@@ -73,8 +94,11 @@ function CardDb() {
                         gap={2}
                     >
                         {cardList.map(item => {
+                            const innerData = packageData(item);
                             return (
-                                <CardBox {...packageData(item)} />
+                                <div onClick={handleOpen} id={innerData._id}>
+                                    <CardBox  {...innerData} />
+                                </div>
                             );
                         })}
                     </ImageList>
@@ -83,6 +107,9 @@ function CardDb() {
                     <Paper elevation={12} style={{ height: '100%' }}>Coming soon……</Paper>
                 </Grid>
             </Grid>
+            <Dialog onClose={handleClose} open={open}>
+                <CardBox {...showData} size={600}></CardBox>
+            </Dialog>
         </>
     );
 }
