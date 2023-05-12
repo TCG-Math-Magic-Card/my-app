@@ -106,7 +106,7 @@ function CardDb() {
                         {cardList.map(item => {
                             const innerData = packageData(item);
                             return (
-                                <div onClick={handleOpen} id={innerData._id}>
+                                <div key={innerData._id} onClick={handleOpen} id={innerData._id}>
                                     <CardBox  {...innerData} />
                                 </div>
                             );

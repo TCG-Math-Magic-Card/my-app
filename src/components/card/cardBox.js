@@ -1,3 +1,4 @@
+import { Skeleton } from '@mui/material';
 import { Card } from '../../../node_modules/mmcjs/src/index';
 import { useEffect, useRef, useState } from 'react';
 
@@ -26,6 +27,7 @@ function CardBox({
         pic,
         formulaPic,
     };
+    const [loading, setLoading] = useState(true);
     const [card, setCard] = useState(null);
     const [hasDraw, setHasDraw] = useState(false);
     const canvas = useRef(null);
@@ -46,6 +48,7 @@ function CardBox({
         newCard.render();
         setCard(newCard);
         setHasDraw(true);
+        setLoading(false);
     };
 
     useEffect(() => {
@@ -87,7 +90,12 @@ function CardBox({
     }, []);
 
     return (
-        <canvas width={size2[0]} height={size2[1]} ref={canvas} />
+        <div>
+            {loading && (
+                <Skeleton variant="rounded" width={size2[0]} height={size2[1]} />
+            )}
+            <canvas width={size2[0]} height={size2[1]} ref={canvas} />
+        </div>
     );
 }
 
