@@ -13,6 +13,7 @@ import CardDb from './routes/cardDb';
 import News from './routes/news';
 import About from './routes/about';
 import NewContent, { loader as newsLoader } from './routes/newContent';
+import Devlopment from './routes/devlopment';
 
 
 
@@ -47,6 +48,10 @@ const router =
           {
             path: "about",
             element: <About></About>
+          },
+          {
+            path: "devlopment",
+            element: <Devlopment />
           }
         ]
       },

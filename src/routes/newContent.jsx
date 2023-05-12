@@ -11,10 +11,11 @@ export async function loader({ params }) {
 function NewContent() {
     const { contact } = useLoaderData()
     return (
-        <Grid container justifyContent={"left"}>
-            <ReactMarkdown>{contact}</ReactMarkdown>
-        </Grid>
-
+        <>
+            <Grid item justifyContent={"left"}>
+                <ReactMarkdown>{contact}</ReactMarkdown>
+            </Grid>
+        </>
     );
 }
 

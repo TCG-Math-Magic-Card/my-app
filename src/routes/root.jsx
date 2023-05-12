@@ -15,17 +15,16 @@ import { Grid, Select } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import LanguageIcon from '@mui/icons-material/Language';
 
-const pages = [
-    { name: '完整规则', to: 'rule' },
-    { name: '卡片库', to: 'store' },
-    { name: '新闻', to: 'news' },
-    { name: '关于', to: 'about' },
-    { name: '成为贡献者', to: `news/${encodeURIComponent('md/devlopment.md')}` },
-];
-
-
 function Root() {
     const { t, i18n } = useTranslation();
+    const pages = [
+        { name: '完整规则', to: 'rule' },
+        { name: '卡片库', to: 'store' },
+        { name: '新闻', to: 'news' },
+        { name: '关于', to: 'about' },
+        { name: '成为贡献者', to: `devlopment` },
+    ];
+
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     console.log(i18n.language);
     const [lang, setLang] = React.useState(i18n.language.substring(0, 2));
