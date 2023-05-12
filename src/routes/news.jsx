@@ -9,6 +9,7 @@ function News() {
             desc: '数学魔法卡网站正式成立上线，欢迎使用和提意见。',
             img: 'pic/Card_temp_cn.jpg',
             date: '2023-05-11',
+            path: 'news/test.md',
         },
     ]
 
@@ -26,7 +27,7 @@ function News() {
                             <Grid
                                 justifyContent="center"
                                 item xs={12}>
-                                <Link to="/" style={{ textDecoration: 'none' }}>
+                                <Link to={`/news/${encodeURIComponent(item.path)}`} style={{ textDecoration: 'none' }}>
                                     {/* sx={{ maxWidth: 900 }} */}
                                     <Card >
                                         <CardActionArea>

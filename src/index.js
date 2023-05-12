@@ -12,6 +12,7 @@ import RulePage from './routes/rule';
 import CardDb from './routes/cardDb';
 import News from './routes/news';
 import About from './routes/about';
+import NewContent, { loader as newsLoader } from './routes/newContent';
 
 
 
@@ -37,6 +38,11 @@ const router =
           {
             path: "news",
             element: <News></News>
+          },
+          {
+            path: "news/:path",
+            element: <NewContent></NewContent>,
+            loader: newsLoader,
           },
           {
             path: "about",
