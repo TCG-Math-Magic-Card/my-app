@@ -1,7 +1,7 @@
 import { Dialog, Grid, ImageList, Paper } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import CardBox from "../components/card/cardBox";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Category } from "@mui/icons-material";
 
 function CardDb() {
@@ -29,14 +29,23 @@ function CardDb() {
     function handleClose() {
         setOpen(false)
     }
-    if (cardList.length == 0) {
-        fetch(`https://raw.githubusercontent.com/TCG-Math-Magic-Card/db/main/${t('db')}`)
-            .then(response => response.json())
-            .then(data => {
-                setCardList(data);
-            })
-            .catch(error => console.error(error));
-    }
+
+    useEffect(() => {
+        if (localStorage.getItem(`__MMC__store__${i18n.language}`)) {
+            const a = JSON.parse(localStorage.getItem(`__MMC__store__${i18n.language}`))
+            setCardList(a);
+        } else {
+            fetch(`https://raw.githubusercontent.com/TCG-Math-Magic-Card/db/main/${t('db')}`)
+                .then(response => response.json())
+                .then(data => {
+                    setCardList(data);
+                    localStorage.setItem(`__MMC__store__${i18n.language}`, JSON.stringify(data));
+                })
+                .catch(error => console.error(error));
+        }
+
+    }, [i18n.language]);
+
 
     // const cardList = [
     //     {

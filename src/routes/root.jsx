@@ -20,6 +20,7 @@ const pages = [
     { name: '卡片库', to: 'store' },
     { name: '新闻', to: 'news' },
     { name: '关于', to: 'about' },
+    { name: '成为贡献者', to: `news/${encodeURIComponent('md/devlopment.md')}` },
 ];
 
 
